@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D72FBA482CADB54A0047EBBC /* Aerophile_ScoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D78D633A2CAC25CB00CD54ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D78D63212CAC25CA00CD54ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D78D63282CAC25CA00CD54ED;
+			remoteInfo = "Aerophile Scout";
+		};
+		D78D63442CAC25CB00CD54ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D78D63212CAC25CA00CD54ED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D78D63282CAC25CA00CD54ED;
+			remoteInfo = "Aerophile Scout";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aerophile_ScoutApp.swift; sourceTree = "<group>"; };
+		D78D63292CAC25CA00CD54ED /* Aerophile Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aerophile Scout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78D63392CAC25CB00CD54ED /* Aerophile ScoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D78D63432CAC25CB00CD54ED /* Aerophile ScoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D78D632B2CAC25CA00CD54ED /* Aerophile Scout */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Aerophile Scout";
+			sourceTree = "<group>";
+		};
+		D78D633C2CAC25CB00CD54ED /* Aerophile ScoutTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Aerophile ScoutTests";
+			sourceTree = "<group>";
+		};
+		D78D63462CAC25CB00CD54ED /* Aerophile ScoutUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Aerophile ScoutUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D78D63262CAC25CA00CD54ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78D63362CAC25CB00CD54ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78D63402CAC25CB00CD54ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D78D63202CAC25CA00CD54ED = {
+			isa = PBXGroup;
+			children = (
+				D78D632B2CAC25CA00CD54ED /* Aerophile Scout */,
+				D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */,
+				D78D633C2CAC25CB00CD54ED /* Aerophile ScoutTests */,
+				D78D63462CAC25CB00CD54ED /* Aerophile ScoutUITests */,
+				D78D632A2CAC25CA00CD54ED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D78D632A2CAC25CA00CD54ED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D78D63292CAC25CA00CD54ED /* Aerophile Scout.app */,
+				D78D63392CAC25CB00CD54ED /* Aerophile ScoutTests.xctest */,
+				D78D63432CAC25CB00CD54ED /* Aerophile ScoutUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D78D63282CAC25CA00CD54ED /* Aerophile Scout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78D634D2CAC25CB00CD54ED /* Build configuration list for PBXNativeTarget "Aerophile Scout" */;
+			buildPhases = (
+				D78D63252CAC25CA00CD54ED /* Sources */,
+				D78D63262CAC25CA00CD54ED /* Frameworks */,
+				D78D63272CAC25CA00CD54ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D78D632B2CAC25CA00CD54ED /* Aerophile Scout */,
+			);
+			name = "Aerophile Scout";
+			packageProductDependencies = (
+			);
+			productName = "Aerophile Scout";
+			productReference = D78D63292CAC25CA00CD54ED /* Aerophile Scout.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D78D63382CAC25CB00CD54ED /* Aerophile ScoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78D63502CAC25CB00CD54ED /* Build configuration list for PBXNativeTarget "Aerophile ScoutTests" */;
+			buildPhases = (
+				D78D63352CAC25CB00CD54ED /* Sources */,
+				D78D63362CAC25CB00CD54ED /* Frameworks */,
+				D78D63372CAC25CB00CD54ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D78D633B2CAC25CB00CD54ED /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D78D633C2CAC25CB00CD54ED /* Aerophile ScoutTests */,
+			);
+			name = "Aerophile ScoutTests";
+			packageProductDependencies = (
+			);
+			productName = "Aerophile ScoutTests";
+			productReference = D78D63392CAC25CB00CD54ED /* Aerophile ScoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D78D63422CAC25CB00CD54ED /* Aerophile ScoutUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D78D63532CAC25CB00CD54ED /* Build configuration list for PBXNativeTarget "Aerophile ScoutUITests" */;
+			buildPhases = (
+				D78D633F2CAC25CB00CD54ED /* Sources */,
+				D78D63402CAC25CB00CD54ED /* Frameworks */,
+				D78D63412CAC25CB00CD54ED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D78D63452CAC25CB00CD54ED /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D78D63462CAC25CB00CD54ED /* Aerophile ScoutUITests */,
+			);
+			name = "Aerophile ScoutUITests";
+			packageProductDependencies = (
+			);
+			productName = "Aerophile ScoutUITests";
+			productReference = D78D63432CAC25CB00CD54ED /* Aerophile ScoutUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D78D63212CAC25CA00CD54ED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					D78D63282CAC25CA00CD54ED = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					D78D63382CAC25CB00CD54ED = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = D78D63282CAC25CA00CD54ED;
+					};
+					D78D63422CAC25CB00CD54ED = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = D78D63282CAC25CA00CD54ED;
+					};
+				};
+			};
+			buildConfigurationList = D78D63242CAC25CA00CD54ED /* Build configuration list for PBXProject "Aerophile Scout" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D78D63202CAC25CA00CD54ED;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = D78D632A2CAC25CA00CD54ED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D78D63282CAC25CA00CD54ED /* Aerophile Scout */,
+				D78D63382CAC25CB00CD54ED /* Aerophile ScoutTests */,
+				D78D63422CAC25CB00CD54ED /* Aerophile ScoutUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D78D63272CAC25CA00CD54ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78D63372CAC25CB00CD54ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78D63412CAC25CB00CD54ED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D78D63252CAC25CA00CD54ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D72FBA482CADB54A0047EBBC /* Aerophile_ScoutApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78D63352CAC25CB00CD54ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D78D633F2CAC25CB00CD54ED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D78D633B2CAC25CB00CD54ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D78D63282CAC25CA00CD54ED /* Aerophile Scout */;
+			targetProxy = D78D633A2CAC25CB00CD54ED /* PBXContainerItemProxy */;
+		};
+		D78D63452CAC25CB00CD54ED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D78D63282CAC25CA00CD54ED /* Aerophile Scout */;
+			targetProxy = D78D63442CAC25CB00CD54ED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D78D634B2CAC25CB00CD54ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D78D634C2CAC25CB00CD54ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D78D634E2CAC25CB00CD54ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Aerophile Scout/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.Aerophile-Scout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D78D634F2CAC25CB00CD54ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Aerophile Scout/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.Aerophile-Scout";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D78D63512CAC25CB00CD54ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.Aerophile-ScoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aerophile Scout.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Aerophile Scout";
+			};
+			name = Debug;
+		};
+		D78D63522CAC25CB00CD54ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.Aerophile-ScoutTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aerophile Scout.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Aerophile Scout";
+			};
+			name = Release;
+		};
+		D78D63542CAC25CB00CD54ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.Aerophile-ScoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aerophile Scout";
+			};
+			name = Debug;
+		};
+		D78D63552CAC25CB00CD54ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev.Aerophile-ScoutUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Aerophile Scout";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D78D63242CAC25CA00CD54ED /* Build configuration list for PBXProject "Aerophile Scout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78D634B2CAC25CB00CD54ED /* Debug */,
+				D78D634C2CAC25CB00CD54ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D78D634D2CAC25CB00CD54ED /* Build configuration list for PBXNativeTarget "Aerophile Scout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78D634E2CAC25CB00CD54ED /* Debug */,
+				D78D634F2CAC25CB00CD54ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D78D63502CAC25CB00CD54ED /* Build configuration list for PBXNativeTarget "Aerophile ScoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78D63512CAC25CB00CD54ED /* Debug */,
+				D78D63522CAC25CB00CD54ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D78D63532CAC25CB00CD54ED /* Build configuration list for PBXNativeTarget "Aerophile ScoutUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D78D63542CAC25CB00CD54ED /* Debug */,
+				D78D63552CAC25CB00CD54ED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D78D63212CAC25CA00CD54ED /* Project object */;
+}

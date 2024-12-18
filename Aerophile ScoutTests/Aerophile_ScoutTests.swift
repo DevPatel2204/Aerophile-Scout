@@ -1,0 +1,17 @@
+//
+//  Aerophile_ScoutTests.swift
+//  Aerophile ScoutTests
+//
+//  Created by Dev on 01/10/24.
+//
+
+import Testing
+@testable import Aerophile_Scout
+
+struct Aerophile_ScoutTests {
+
+    @Test func example() async throws {
+        // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+    }
+
+}
