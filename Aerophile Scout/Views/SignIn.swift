@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct LoginScreen: View {
+struct SignIn: View {
     @State private var username :String = ""
     @State private var password :String = ""
     @State private var isLoggedIn :Bool = false
+    @StateObject private var authViewModel = AuthViewModel()
     var body: some View {
         NavigationStack {
             ZStack {
@@ -37,38 +38,42 @@ struct LoginScreen: View {
                         .padding()
                     
                     Button {
-                        //Auth Code for login from firebase
-                        isLoggedIn = true
+                        authViewModel.signIn(email: username, password: password) { success in
+                            if success {
+                                print("User Signed in successfully")
+                                isLoggedIn = true // Move this inside the closure
+                            } else {
+                                print(authViewModel.errorMessage ?? "Error")
+                            }
+                        }
                     } label: {
                         Text("LogIn")
                             .foregroundStyle(.white)
                             .font(.system(size: 20))
-                            .frame(width: 200 , height: 50)
+                            .frame(width: 200, height: 50)
                             .background(Color.black)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
                     
-                    HStack(spacing:1){
-                        Text("Dont have an account?")
+                    HStack(spacing: 1) {
+                        Text("Don't have an account?")
                             .foregroundStyle(.black)
                             .font(.footnote)
                             .padding()
                         
-                        
-                        NavigationLink(destination:SignUp()){
+                        NavigationLink(destination: SignUp()) {
                             Text("SignUp")
                                 .foregroundStyle(.black)
                         }
                     }
                     
                 }
+                .navigationBarBackButtonHidden(true)
             }
-            .navigationBarBackButtonHidden(true)
         }
-
     }
 }
 
 #Preview {
-    LoginScreen()
+    SignIn()
 }

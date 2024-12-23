@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct SignUp: View {
     @State private var username : String = ""
     @State private var email : String = ""
     @State private var password : String = ""
     @State private var confirmPassword : String = ""
+    @StateObject var authViewModel = AuthViewModel()
     
     var body: some View {
         NavigationStack{
@@ -53,35 +55,37 @@ struct SignUp: View {
                         .padding()
                     
                     Button {
-                        //Auth Code for SignUp from firebase
-                        
+                        authViewModel.signUp(email: email, password: password) { success in
+                            if success {
+                                print("User Created")
+                            } else {
+                                print(authViewModel.errorMessage ?? "Error")
+                            }
+                        }
                     } label: {
                         Text("SignUp")
                             .foregroundStyle(.white)
                             .font(.system(size: 20))
-                            .frame(width: 200 , height: 50)
+                            .frame(width: 200, height: 50)
                             .background(Color.black)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
                     
-                    HStack(spacing:1){
-                        Text(" Already have an account?")
+                    HStack(spacing: 1) {
+                        Text("Already have an account?")
                             .foregroundStyle(.black)
                             .font(.footnote)
                             .padding()
                         
-                        
-                        NavigationLink(destination:LoginScreen()){
+                        NavigationLink(destination: SignIn()) {
                             Text("Login")
                                 .foregroundStyle(.black)
                         }
                     }
-                    
                 }
+                .navigationBarBackButtonHidden(true)
             }
-            .navigationBarBackButtonHidden(true)
         }
-        
     }
 }
 
