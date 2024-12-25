@@ -12,7 +12,7 @@ struct FlightDetailModel:Codable {
 }
 
 struct Data:Codable {
-    var flight_data:String
+    var flight_date:String
     var flight_status:String
     var departure:Departure
     var arrival:Arrival
