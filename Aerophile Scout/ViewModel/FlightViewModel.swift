@@ -35,13 +35,7 @@ class FlightViewModel : ObservableObject {
             }
         }
     }
-    //    private func updateFlight(){
-    //        self.info = Info(status: flight.data[0].flight_status, icon: "airplane", color: .blue, date: flight.data[0].departure.scheduled)
-    //        self.departureInfo = DepartureInfo(airport: flight.data[0].departure.airport, terminal: flight.data[0].departure.terminal, scheduled: flight.data[0].departure.scheduled, actual: flight.data[0].departure.actual)
-    //        self.arrivalInfo = ArrivalInfo(airport: flight.data[0].arrival.airport, terminal: flight.data[0].arrival.terminal, scheduled: flight.data[0].arrival.scheduled, actual: flight.data[0].arrival.actual)
-    //        self.airlineInfo = AirlineInfo(airline: flight.data[0].airline.name, flightNumber: flight.data[0].flight.number, flightSeries: flight.data[0].flight.iata)
-    //
-    //    }
+    
     var date : String{
         let date = flight.data[0].flight_date
         let divide = date.split(separator: "-")
