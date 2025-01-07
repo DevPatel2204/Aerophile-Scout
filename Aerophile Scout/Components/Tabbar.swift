@@ -20,7 +20,11 @@ struct Tabbar: View {
                 Label("News", systemImage: "newspaper.fill")
                     .foregroundStyle(.black)
             }
-            
+            Chat_Screen()
+                .tabItem{
+                    Label("Help",systemImage: "text.bubble.fill")
+                        .foregroundStyle(.black)
+                }
         }
     }
 }
