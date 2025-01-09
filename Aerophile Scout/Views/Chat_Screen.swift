@@ -33,7 +33,7 @@ struct Chat_Screen: View {
                         .padding(.horizontal)
                 }
                 
-                // Loading Indicator
+                // Loading Indicatorbra
                 if isLoading {
                     ProgressView()
                         .progressViewStyle(CircularProgressViewStyle(tint: .white))

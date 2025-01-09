@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct Tabbar: View {
+    @State private var selectedOption: Int = 0
     var body: some View {
         TabView{
-            Home_Screen()
+            Home_Screen(selectedOption: $selectedOption)
                 .tabItem {
                     Label("Tracker", systemImage: "airplane.circle.fill")
                         .foregroundStyle(.black)
                 }
-            News_View()
+            News_Screen()
                 .tabItem{
                 Label("News", systemImage: "newspaper.fill")
                     .foregroundStyle(.black)

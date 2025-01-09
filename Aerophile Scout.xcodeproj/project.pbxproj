@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D7170AFA2D2D644D000B7B4E /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = D7170AF92D2D644D000B7B4E /* GoogleGenerativeAI */; };
 		D72FBA482CADB54A0047EBBC /* Aerophile_ScoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */; };
+		D732027A2D2E60C200BA95D1 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = D73202792D2E60C200BA95D1 /* SwiftSoup */; };
 		D754716A2D19BE1400E312A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75471692D19BE1400E312A8 /* GoogleService-Info.plist */; };
 		D7B3519D2D19C25A009FE336 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7B3519C2D19C25A009FE336 /* FirebaseAnalytics */; };
 		D7B3519F2D19C25A009FE336 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D7B3519E2D19C25A009FE336 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -89,6 +90,7 @@
 				D7170AFA2D2D644D000B7B4E /* GoogleGenerativeAI in Frameworks */,
 				D7B351A32D19C25A009FE336 /* FirebaseAuthCombine-Community in Frameworks */,
 				D7B351AF2D19C25A009FE336 /* FirebaseInAppMessaging-Beta in Frameworks */,
+				D732027A2D2E60C200BA95D1 /* SwiftSoup in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +168,7 @@
 				D7B351B22D19C25A009FE336 /* FirebaseMessaging */,
 				D7B351B42D19C25A009FE336 /* FirebaseStorage */,
 				D7170AF92D2D644D000B7B4E /* GoogleGenerativeAI */,
+				D73202792D2E60C200BA95D1 /* SwiftSoup */,
 			);
 			productName = "Aerophile Scout";
 			productReference = D78D63292CAC25CA00CD54ED /* Aerophile Scout.app */;
@@ -252,6 +255,7 @@
 			packageReferences = (
 				D7B3519B2D19C25A009FE336 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D7170AF82D2D644D000B7B4E /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				D73202782D2E60C200BA95D1 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D78D632A2CAC25CA00CD54ED /* Products */;
@@ -623,6 +627,14 @@
 				minimumVersion = 0.5.6;
 			};
 		};
+		D73202782D2E60C200BA95D1 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.6;
+			};
+		};
 		D7B3519B2D19C25A009FE336 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -638,6 +650,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D7170AF82D2D644D000B7B4E /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
 			productName = GoogleGenerativeAI;
+		};
+		D73202792D2E60C200BA95D1 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D73202782D2E60C200BA95D1 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
 		};
 		D7B3519C2D19C25A009FE336 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
