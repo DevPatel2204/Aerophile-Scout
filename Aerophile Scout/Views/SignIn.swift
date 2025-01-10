@@ -15,26 +15,41 @@ struct SignIn: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                Color(red: 112/255, green: 215/255, blue: 255/255)
+                LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.cyan]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .ignoresSafeArea()
-                VStack(spacing:5){
-                    Text("Login")
-                        .foregroundStyle(.black)
-                        .font(.system(size: 35))
-                        .fontWeight(.bold)
+                VStack(spacing: 20) {
+                    VStack(spacing:5){
+                        Text("Welcome Back")
+                            .foregroundStyle(.white)
+                            .font(.system(size: 40, weight: .bold, design: .rounded))
+                        Text("Sign in to continue")
+                            .foregroundStyle(.white.opacity(0.8))
+                            .font(.system(size: 20, design: .rounded))
+                    }
+                    .padding(.bottom, 40)
                     
                     TextField("Username", text: $username)
                         .padding()
                         .frame(width: 390, height: 60)
-                        .background(Color.white.opacity(0.4))
+                        .background(Color.white.opacity(0.3))
+                        .foregroundStyle(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
-                        .padding()
+                        .overlay(
+                                                    RoundedRectangle(cornerRadius: 15)
+                                                        .stroke(Color.white.opacity(0.4), lineWidth: 1)
+                                                )
+                        .padding(.horizontal,30)
                     
                     SecureField("Password", text: $password)
                         .padding()
                         .frame(width: 390, height: 60)
-                        .background(Color.white.opacity(0.4))
+                        .background(Color.white.opacity(0.3)
+                            .foregroundStyle(.white))
                         .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .overlay(
+                                                    RoundedRectangle(cornerRadius: 15)
+                                                        .stroke(Color.white.opacity(0.4), lineWidth: 1)
+                                                )
                         .padding()
                     
                     Button {
@@ -48,12 +63,16 @@ struct SignIn: View {
                         }
                     } label: {
                         Text("LogIn")
-                            .foregroundStyle(.white)
-                            .font(.system(size: 20))
-                            .frame(width: 200, height: 50)
-                            .background(Color.black)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .font(.system(size: 20, weight: .bold, design: .rounded))
+                                                       .foregroundColor(.white)
+                                                       .frame(width: 200, height: 20)
+                                                       .padding()
+                                                       .background(Color.blue.opacity(0.8))
+                                                       .cornerRadius(15)
+                                                       .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
                     }
+                    .padding(.horizontal, 30)
+                                      .padding(.top, 10)
                     
                     HStack(spacing: 1) {
                         Text("Don't have an account?")
@@ -73,6 +92,7 @@ struct SignIn: View {
         }
     }
 }
+
 
 #Preview {
     SignIn()
