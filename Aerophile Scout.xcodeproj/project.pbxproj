@@ -24,7 +24,6 @@
 		D7B351B12D19C25A009FE336 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351B02D19C25A009FE336 /* FirebaseInstallations */; };
 		D7B351B32D19C25A009FE336 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351B22D19C25A009FE336 /* FirebaseMessaging */; };
 		D7B351B52D19C25A009FE336 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351B42D19C25A009FE336 /* FirebaseStorage */; };
-		D7E658D82D1AE00600005DD8 /* API_KEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7E658CD2D1AE00600005DD8 /* API_KEY.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +49,6 @@
 		D78D63292CAC25CA00CD54ED /* Aerophile Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aerophile Scout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78D63392CAC25CB00CD54ED /* Aerophile ScoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78D63432CAC25CB00CD54ED /* Aerophile ScoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D7E658CD2D1AE00600005DD8 /* API_KEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API_KEY.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -116,7 +114,6 @@
 			children = (
 				D78D632B2CAC25CA00CD54ED /* Aerophile Scout */,
 				D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */,
-				D7E658CD2D1AE00600005DD8 /* API_KEY.plist */,
 				D75471692D19BE1400E312A8 /* GoogleService-Info.plist */,
 				D78D633C2CAC25CB00CD54ED /* Aerophile ScoutTests */,
 				D78D63462CAC25CB00CD54ED /* Aerophile ScoutUITests */,
@@ -275,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D754716A2D19BE1400E312A8 /* GoogleService-Info.plist in Resources */,
-				D7E658D82D1AE00600005DD8 /* API_KEY.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@ struct SignUp: View {
         NavigationStack{
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.6), Color.cyan]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                                  .ignoresSafeArea()
+                    .ignoresSafeArea()
                 VStack{
                     VStack(spacing:5){
                         Text("Hey There! Avgeek!")
@@ -38,9 +38,9 @@ struct SignUp: View {
                         .foregroundStyle(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .overlay(
-                                                    RoundedRectangle(cornerRadius: 15)
-                                                        .stroke(Color.white.opacity(0.4), lineWidth: 1)
-                                                )
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.white.opacity(0.4), lineWidth: 1)
+                        )
                         .padding(.horizontal,30)
                     
                     TextField("E-Mail", text: $email)
@@ -50,9 +50,9 @@ struct SignUp: View {
                         .foregroundStyle(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .overlay(
-                                                    RoundedRectangle(cornerRadius: 15)
-                                                        .stroke(Color.white.opacity(0.4), lineWidth: 1)
-                                                )
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.white.opacity(0.4), lineWidth: 1)
+                        )
                         .padding()
                     
                     SecureField("Password", text: $password)
@@ -62,9 +62,9 @@ struct SignUp: View {
                         .foregroundStyle(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .overlay(
-                                                    RoundedRectangle(cornerRadius: 15)
-                                                        .stroke(Color.white.opacity(0.4), lineWidth: 1)
-                                                )
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.white.opacity(0.4), lineWidth: 1)
+                        )
                         .padding()
                     
                     SecureField("confirmPassword", text: $confirmPassword)
@@ -74,9 +74,9 @@ struct SignUp: View {
                         .foregroundStyle(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .overlay(
-                                                    RoundedRectangle(cornerRadius: 15)
-                                                        .stroke(Color.white.opacity(0.4), lineWidth: 1)
-                                                )
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.white.opacity(0.4), lineWidth: 1)
+                        )
                         .padding()
                     
                     Button {
@@ -90,12 +90,12 @@ struct SignUp: View {
                     } label: {
                         Text("SignUp")
                             .font(.system(size: 20, weight: .bold, design: .rounded))
-                                                       .foregroundColor(.white)
-                                                       .frame(width: 200, height: 20)
-                                                       .padding()
-                                                       .background(Color.blue.opacity(0.8))
-                                                       .cornerRadius(15)
-                                                       .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 20)
+                            .padding()
+                            .background(Color.blue.opacity(0.8))
+                            .cornerRadius(15)
+                            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
                     }
                     
                     HStack(spacing: 1) {
