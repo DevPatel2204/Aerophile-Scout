@@ -4,13 +4,14 @@
 //
 //  Created by Dev on 26/12/24.
 //
+
 import SwiftUI
 
 struct Home_Screen: View {
     @State var Flight_No = ""
     @StateObject var FlightVM = FlightViewModel()
     @Binding var selectedOption: Int
-
+    @State private var isNavigating = false
     var body: some View {
         NavigationStack {
             ZStack {
@@ -65,16 +66,22 @@ struct Home_Screen: View {
                     Spacer()
                     
                     // Search Button
-                    Button {
-                        // Add your search action here
-                    } label: {
-                        Text("Search")
-                            .fontWeight(.medium)
-                            .frame(width: 200, height: 50)
-                            .background(Color.black)
-                            .foregroundColor(.white)
-                            .clipShape(RoundedRectangle(cornerRadius: 15))
-                    }
+                    NavigationLink(destination: ResultFlight_Screen(flight: Flight_No), isActive: $isNavigating){
+                                           Button {
+                                               if !Flight_No.isEmpty {
+                                                   isNavigating = true
+                                               }
+                                           } label: {
+                                               Text("Search")
+                                                   .fontWeight(.medium)
+                                                   .frame(width: 200, height: 50)
+                                                   .background(Color.black)
+                                                   .foregroundColor(.white)
+                                                   .clipShape(RoundedRectangle(cornerRadius: 15))
+                                           }
+                                       }
+                                       .disabled(Flight_No.isEmpty) // Disable the button if no flight number is entered
+
                     
                     Spacer()
                 }

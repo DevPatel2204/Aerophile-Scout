@@ -11,76 +11,172 @@ import SwiftSoup
 struct News: Identifiable {
     let id = UUID()
     let title: String
+    let description: String
     let link: String
+    let imageUrl: String?
 }
+
 struct News_Screen: View {
-    @State private var newsList: [News]
-    @State private var isLoading: Bool
-
-    init(newsList: [News] = [], isLoading: Bool = true) {
-        _newsList = State(initialValue: newsList)
-        _isLoading = State(initialValue: isLoading)
-    }
-
+    @State private var newsList: [News] = []
+    @State private var isLoading = true
+    @State private var errorMessage: String?
+    
     var body: some View {
         NavigationView {
-            List(newsList) { news in
-                VStack(alignment: .leading) {
-                    Text(news.title)
-                        .font(.headline)
-                    Link("Read more", destination: URL(string: news.link)!)
-                        .foregroundColor(.blue)
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.white]), 
+                             startPoint: .top, 
+                             endPoint: .bottom)
+                    .ignoresSafeArea()
+                
+                if isLoading {
+                    ProgressView("Fetching latest news...")
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        .foregroundColor(.white)
+                } else if let error = errorMessage {
+                    VStack {
+                        Image(systemName: "exclamationmark.triangle")
+                            .font(.largeTitle)
+                            .foregroundColor(.yellow)
+                        Text(error)
+                            .foregroundColor(.white)
+                            .multilineTextAlignment(.center)
+                            .padding()
+                        Button("Retry") {
+                            fetchNews()
+                        }
+                        .buttonStyle(.bordered)
+                        .tint(.white)
+                    }
+                } else {
+                    ScrollView {
+                        LazyVStack(spacing: 16) {
+                            ForEach(newsList) { news in
+                                NewsCard(news: news)
+                            }
+                        }
+                        .padding()
+                    }
                 }
-                .padding(.vertical, 5)
             }
             .navigationTitle("Aviation News")
             .onAppear(perform: fetchNews)
-            .overlay(
-                Group {
-                    if isLoading {
-                        ProgressView("Loading...")
-                    }
-                }
-            )
         }
     }
-
+    
     private func fetchNews() {
-        guard let url = URL(string: "https://www.flightglobal.com/news/aerospace") else {
-            print("Invalid URL")
+        isLoading = true
+        errorMessage = nil
+        
+        // Using Simple Flying as the source
+        guard let url = URL(string: "https://simpleflying.com/category/aviation-news/") else {
+            errorMessage = "Invalid URL"
+            isLoading = false
             return
         }
-
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data, error == nil else {
-                print("Error fetching data: \(error?.localizedDescription ?? "Unknown error")")
+            if let error = error {
+                DispatchQueue.main.async {
+                    errorMessage = "Failed to load news: \(error.localizedDescription)"
+                    isLoading = false
+                }
                 return
             }
-
-            do {
-                let html = String(data: data, encoding: .utf8) ?? ""
-                let document = try SwiftSoup.parse(html)
-                let articles = try document.select(".article-link") // Adjust selector based on the website's structure
-                var fetchedNews: [News] = []
-
-                for article in articles {
-                    let title = try article.text()
-                    let link = try article.attr("href")
-                    fetchedNews.append(News(title: title, link: link))
-                }
-
+            
+            guard let data = data,
+                  let html = String(data: data, encoding: .utf8) else {
                 DispatchQueue.main.async {
-                    self.newsList = fetchedNews
+                    errorMessage = "Failed to parse website data"
+                    isLoading = false
+                }
+                return
+            }
+            
+            do {
+                let doc = try SwiftSoup.parse(html)
+                let articles = try doc.select("article")
+                var newsItems: [News] = []
+                
+                for article in articles {
+                    let title = try article.select("h3").text()
+                    let description = try article.select("p.excerpt").text()
+                    let link = try article.select("a").attr("href")
+                    let imageUrl = try? article.select("img").attr("src")
+                    
+                    let news = News(title: title,
+                                  description: description,
+                                  link: link,
+                                  imageUrl: imageUrl)
+                    newsItems.append(news)
+                }
+                
+                DispatchQueue.main.async {
+                    self.newsList = newsItems
                     self.isLoading = false
                 }
             } catch {
-                print("Error parsing HTML: \(error.localizedDescription)")
+                DispatchQueue.main.async {
+                    errorMessage = "Failed to parse news content"
+                    isLoading = false
+                }
             }
         }.resume()
     }
 }
 
+struct NewsCard: View {
+    let news: News
+    
+    var body: some View {
+        Link(destination: URL(string: news.link) ?? URL(string: "https://simpleflying.com")!) {
+            VStack(alignment: .leading, spacing: 8) {
+                if let imageUrl = news.imageUrl,
+                   let url = URL(string: imageUrl) {
+                    AsyncImage(url: url) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                    } placeholder: {
+                        Rectangle()
+                            .fill(Color.gray.opacity(0.3))
+                    }
+                    .frame(height: 200)
+                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                
+                Text(news.title)
+                    .font(.headline)
+                    .foregroundColor(.primary)
+                    .lineLimit(2)
+                
+                Text(news.description)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .lineLimit(3)
+                
+                HStack {
+                    Text("Read more")
+                        .font(.caption)
+                        .foregroundColor(.blue)
+                    
+                    Spacer()
+                    
+                    Image(systemName: "arrow.right.circle.fill")
+                        .foregroundColor(.blue)
+                }
+            }
+            .padding()
+            .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .fill(Color(.systemBackground))
+                    .shadow(color: .black.opacity(0.2), radius: 5)
+            )
+        }
+    }
+}
+
 #Preview {
-    News_Screen(newsList: [News(title: "Sample News", link: "https://example.com")], isLoading: false)
+    News_Screen()
 }
 

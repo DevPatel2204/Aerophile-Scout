@@ -30,26 +30,26 @@ struct SignIn: View {
                     
                     TextField("Username", text: $username)
                         .padding()
-                        .frame(width: 390, height: 60)
+                        .frame(width: 370, height: 50)
                         .background(Color.white.opacity(0.3))
                         .foregroundStyle(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .overlay(
-                                                    RoundedRectangle(cornerRadius: 15)
-                                                        .stroke(Color.white.opacity(0.4), lineWidth: 1)
-                                                )
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.white.opacity(0.4), lineWidth: 2)
+                        )
                         .padding(.horizontal,30)
                     
                     SecureField("Password", text: $password)
                         .padding()
-                        .frame(width: 390, height: 60)
+                        .frame(width: 370, height: 50)
                         .background(Color.white.opacity(0.3)
                             .foregroundStyle(.white))
                         .clipShape(RoundedRectangle(cornerRadius: 20))
                         .overlay(
-                                                    RoundedRectangle(cornerRadius: 15)
-                                                        .stroke(Color.white.opacity(0.4), lineWidth: 1)
-                                                )
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(Color.white.opacity(0.4), lineWidth: 2)
+                        )
                         .padding()
                     
                     Button {
@@ -64,15 +64,15 @@ struct SignIn: View {
                     } label: {
                         Text("LogIn")
                             .font(.system(size: 20, weight: .bold, design: .rounded))
-                                                       .foregroundColor(.white)
-                                                       .frame(width: 200, height: 20)
-                                                       .padding()
-                                                       .background(Color.blue.opacity(0.8))
-                                                       .cornerRadius(15)
-                                                       .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
+                            .foregroundColor(.white)
+                            .frame(width: 200, height: 20)
+                            .padding()
+                            .background(Color.blue.opacity(0.8))
+                            .cornerRadius(15)
+                            .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 5)
                     }
                     .padding(.horizontal, 30)
-                                      .padding(.top, 10)
+                    .padding(.top, 10)
                     
                     HStack(spacing: 1) {
                         Text("Don't have an account?")

@@ -7,18 +7,36 @@
 
 import Foundation
 
-struct FlightDetailModel:Codable {
-    var data : [Data]
+struct FlightDetailModel: Codable {
+    var pagination: Pagination?
+    var data: [FlightData]
 }
 
-struct Data:Codable {
-    var flight_date:String
-    var flight_status:String
-    var departure:Departure
-    var arrival:Arrival
-    var airline:Airline
-    var flight:Flight
-    var aircraft:Aircraft
+struct Pagination: Codable {
+    var limit: Int
+    var offset: Int
+    var count: Int
+    var total: Int
+}
+
+struct FlightData: Codable {
+    var flight_date: String
+    var flight_status: String
+    var departure: Departure
+    var arrival: Arrival
+    var airline: Airline
+    var flight: Flight
+    var aircraft: Aircraft?
+    
+    enum CodingKeys: String, CodingKey {
+        case flight_date
+        case flight_status
+        case departure
+        case arrival
+        case airline
+        case flight
+        case aircraft
+    }
 }
 
 struct Departure :Codable{
@@ -55,7 +73,5 @@ struct Aircraft:Codable{
     var iata :String
     var icao :String
 }
-
-
 
 

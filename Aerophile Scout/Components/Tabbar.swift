@@ -9,6 +9,12 @@ import SwiftUI
 
 struct Tabbar: View {
     @State private var selectedOption: Int = 0
+    init() {
+        UITabBar.appearance().tintColor = UIColor(Color.black)
+        UITabBar.appearance().unselectedItemTintColor = UIColor.black
+        UITabBar.appearance().isTranslucent = true
+        
+    }
     var body: some View {
         TabView{
             Home_Screen(selectedOption: $selectedOption)
