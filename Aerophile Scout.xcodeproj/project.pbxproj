@@ -10,7 +10,6 @@
 		D7170AFA2D2D644D000B7B4E /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = D7170AF92D2D644D000B7B4E /* GoogleGenerativeAI */; };
 		D72FBA482CADB54A0047EBBC /* Aerophile_ScoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */; };
 		D732027A2D2E60C200BA95D1 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = D73202792D2E60C200BA95D1 /* SwiftSoup */; };
-		D754716A2D19BE1400E312A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75471692D19BE1400E312A8 /* GoogleService-Info.plist */; };
 		D7B3519D2D19C25A009FE336 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7B3519C2D19C25A009FE336 /* FirebaseAnalytics */; };
 		D7B3519F2D19C25A009FE336 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D7B3519E2D19C25A009FE336 /* FirebaseAnalyticsOnDeviceConversion */; };
 		D7B351A12D19C25A009FE336 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351A02D19C25A009FE336 /* FirebaseAuth */; };
@@ -24,6 +23,7 @@
 		D7B351B12D19C25A009FE336 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351B02D19C25A009FE336 /* FirebaseInstallations */; };
 		D7B351B32D19C25A009FE336 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351B22D19C25A009FE336 /* FirebaseMessaging */; };
 		D7B351B52D19C25A009FE336 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351B42D19C25A009FE336 /* FirebaseStorage */; };
+		D7F619E42D40D73A004C8E85 /* API_KEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F619E32D40D73A004C8E85 /* API_KEY.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +45,10 @@
 
 /* Begin PBXFileReference section */
 		D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aerophile_ScoutApp.swift; sourceTree = "<group>"; };
-		D75471692D19BE1400E312A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D78D63292CAC25CA00CD54ED /* Aerophile Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aerophile Scout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78D63392CAC25CB00CD54ED /* Aerophile ScoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78D63432CAC25CB00CD54ED /* Aerophile ScoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7F619E32D40D73A004C8E85 /* API_KEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API_KEY.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -114,7 +114,7 @@
 			children = (
 				D78D632B2CAC25CA00CD54ED /* Aerophile Scout */,
 				D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */,
-				D75471692D19BE1400E312A8 /* GoogleService-Info.plist */,
+				D7F619E32D40D73A004C8E85 /* API_KEY.plist */,
 				D78D633C2CAC25CB00CD54ED /* Aerophile ScoutTests */,
 				D78D63462CAC25CB00CD54ED /* Aerophile ScoutUITests */,
 				D78D632A2CAC25CA00CD54ED /* Products */,
@@ -271,7 +271,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D754716A2D19BE1400E312A8 /* GoogleService-Info.plist in Resources */,
+				D7F619E42D40D73A004C8E85 /* API_KEY.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
