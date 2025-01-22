@@ -11,7 +11,6 @@
 		D72FBA482CADB54A0047EBBC /* Aerophile_ScoutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */; };
 		D732027A2D2E60C200BA95D1 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = D73202792D2E60C200BA95D1 /* SwiftSoup */; };
 		D754716A2D19BE1400E312A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D75471692D19BE1400E312A8 /* GoogleService-Info.plist */; };
-		D766C2762D3513C70010FF34 /* API_KEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = D766C2642D3513C70010FF34 /* API_KEY.plist */; };
 		D7B3519D2D19C25A009FE336 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = D7B3519C2D19C25A009FE336 /* FirebaseAnalytics */; };
 		D7B3519F2D19C25A009FE336 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = D7B3519E2D19C25A009FE336 /* FirebaseAnalyticsOnDeviceConversion */; };
 		D7B351A12D19C25A009FE336 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351A02D19C25A009FE336 /* FirebaseAuth */; };
@@ -47,7 +46,6 @@
 /* Begin PBXFileReference section */
 		D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aerophile_ScoutApp.swift; sourceTree = "<group>"; };
 		D75471692D19BE1400E312A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D766C2642D3513C70010FF34 /* API_KEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API_KEY.plist; sourceTree = "<group>"; };
 		D78D63292CAC25CA00CD54ED /* Aerophile Scout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Aerophile Scout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78D63392CAC25CB00CD54ED /* Aerophile ScoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78D63432CAC25CB00CD54ED /* Aerophile ScoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,7 +114,6 @@
 			children = (
 				D78D632B2CAC25CA00CD54ED /* Aerophile Scout */,
 				D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */,
-				D766C2642D3513C70010FF34 /* API_KEY.plist */,
 				D75471692D19BE1400E312A8 /* GoogleService-Info.plist */,
 				D78D633C2CAC25CB00CD54ED /* Aerophile ScoutTests */,
 				D78D63462CAC25CB00CD54ED /* Aerophile ScoutUITests */,
@@ -275,7 +272,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D754716A2D19BE1400E312A8 /* GoogleService-Info.plist in Resources */,
-				D766C2762D3513C70010FF34 /* API_KEY.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
