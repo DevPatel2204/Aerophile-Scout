@@ -14,7 +14,7 @@ class FlightService{
     private var apiKey : String? {
         guard let path = Bundle.main.path(forResource: "API_KEY", ofType: "plist") ,
               let plist = NSDictionary(contentsOfFile: path),
-              let key = plist["Aviation_API_KEY"] as? String else {
+              let key = plist["API_KEY"] as? String else {
             print("Error: API key not found in api.plist")
             return nil
         }
@@ -24,16 +24,16 @@ class FlightService{
     func getFlight(iata : String, completion: @escaping(FlightDetailModel?) -> ())
     {
         guard let apiKey = apiKey else {
-            print("Error: API key not found")
+            print("⚠️ Error: API key not found")
             completion(nil)
             return
         }
         
         let urlString = "https://api.aviationstack.com/v1/flights?access_key=\(apiKey)&flight_iata=\(iata)"
-        print("Requesting URL: \(urlString)") // Debug print
+        print("🌐 Requesting URL: \(urlString)")
         
         guard let url = URL(string: urlString) else {
-            print("Error: Invalid URL")
+            print("⚠️ Error: Invalid URL")
             completion(nil)
             return
         }
@@ -45,52 +45,56 @@ class FlightService{
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                print("Network error: \(error.localizedDescription)")
+                print("❌ Network error: \(error.localizedDescription)")
                 completion(nil)
                 return
             }
             
             guard let httpResponse = response as? HTTPURLResponse else {
-                print("Error: Invalid response type")
+                print("❌ Error: Invalid response type")
                 completion(nil)
                 return
             }
             
-            print("HTTP Status Code: \(httpResponse.statusCode)")
+            print("📡 HTTP Status Code: \(httpResponse.statusCode)")
+            
+            if let data = data {
+                print("Raw response: \(String(data: data, encoding: .utf8) ?? "Unable to convert data to string")")
+            }
             
             switch httpResponse.statusCode {
             case 200:
                 guard let data = data else {
-                    print("Error: No data received")
+                    print("❌ Error: No data received")
                     completion(nil)
                     return
                 }
                 
-                // Debug print raw response
+                // Print raw response for debugging
                 if let jsonString = String(data: data, encoding: .utf8) {
-                    print("Raw API Response: \(jsonString)")
+                    print("📦 Raw API Response: \(jsonString)")
                 }
                 
                 do {
                     let flightData = try JSONDecoder().decode(FlightDetailModel.self, from: data)
-                    print("Successfully decoded flight data with \(flightData.data.count) flights")
+                    print("✅ Successfully decoded flight data with \(flightData.data.count) flights")
                     completion(flightData)
                 } catch {
-                    print("Decoding error: \(error)")
+                    print("❌ Decoding error: \(error)")
                     completion(nil)
                 }
                 
             case 401:
-                print("Error: Unauthorized - Invalid API key")
+                print("❌ Error: Unauthorized - Invalid API key")
                 completion(nil)
             case 404:
-                print("Error: Flight not found")
+                print("❌ Error: Flight not found")
                 completion(nil)
             case 429:
-                print("Error: Rate limit exceeded")
+                print("❌ Error: Rate limit exceeded")
                 completion(nil)
             default:
-                print("Error: Unexpected status code \(httpResponse.statusCode)")
+                print("❌ Error: Unexpected status code \(httpResponse.statusCode)")
                 completion(nil)
             }
         }.resume()

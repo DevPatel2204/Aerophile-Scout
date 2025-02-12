@@ -37,6 +37,7 @@ struct ResultFlight_Screen: View {
         .navigationTitle("Flight Details")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
+            print("🔄 ResultFlight_Screen appeared for flight: \(flight)")
             FlightVM.getFlight(iata: flight)
         }
         .alert("Error", isPresented: $FlightVM.showError) {
@@ -124,12 +125,30 @@ struct ResultFlight_Screen: View {
     
     // MARK: - Helper Functions
     private func formatDate(_ dateString: String) -> String {
-        // Add date formatting logic here
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = "MMM d, yyyy"
+        
+        if let date = inputFormatter.date(from: dateString) {
+            return outputFormatter.string(from: date)
+        }
         return dateString
     }
     
     private func formatTime(_ timeString: String) -> String {
-        // Add time formatting logic here
+        guard !timeString.isEmpty && timeString != "N/A" else { return "N/A" }
+        
+        let inputFormatter = DateFormatter()
+        inputFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        
+        let outputFormatter = DateFormatter()
+        outputFormatter.dateFormat = "HH:mm"
+        
+        if let date = inputFormatter.date(from: timeString) {
+            return outputFormatter.string(from: date)
+        }
         return timeString
     }
 }

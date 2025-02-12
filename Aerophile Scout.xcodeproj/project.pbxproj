@@ -24,6 +24,7 @@
 		D7B351B32D19C25A009FE336 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351B22D19C25A009FE336 /* FirebaseMessaging */; };
 		D7B351B52D19C25A009FE336 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = D7B351B42D19C25A009FE336 /* FirebaseStorage */; };
 		D7F619E42D40D73A004C8E85 /* API_KEY.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F619E32D40D73A004C8E85 /* API_KEY.plist */; };
+		D7F619E62D40D7A2004C8E85 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F619E52D40D7A2004C8E85 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D78D63392CAC25CB00CD54ED /* Aerophile ScoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78D63432CAC25CB00CD54ED /* Aerophile ScoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Aerophile ScoutUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7F619E32D40D73A004C8E85 /* API_KEY.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = API_KEY.plist; sourceTree = "<group>"; };
+		D7F619E52D40D7A2004C8E85 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -115,6 +117,7 @@
 				D78D632B2CAC25CA00CD54ED /* Aerophile Scout */,
 				D72FBA452CADB54A0047EBBC /* Aerophile_ScoutApp.swift */,
 				D7F619E32D40D73A004C8E85 /* API_KEY.plist */,
+				D7F619E52D40D7A2004C8E85 /* GoogleService-Info.plist */,
 				D78D633C2CAC25CB00CD54ED /* Aerophile ScoutTests */,
 				D78D63462CAC25CB00CD54ED /* Aerophile ScoutUITests */,
 				D78D632A2CAC25CA00CD54ED /* Products */,
@@ -271,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7F619E62D40D7A2004C8E85 /* GoogleService-Info.plist in Resources */,
 				D7F619E42D40D73A004C8E85 /* API_KEY.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

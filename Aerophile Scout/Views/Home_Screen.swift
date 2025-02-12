@@ -88,6 +88,7 @@ struct Home_Screen: View {
                 .padding(.top)
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
     
     // Helper function for segment buttons

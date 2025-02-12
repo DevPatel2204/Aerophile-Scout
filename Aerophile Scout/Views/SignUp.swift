@@ -49,6 +49,11 @@ struct SignUp: View {
                         .background(Color.white.opacity(0.3))
                         .foregroundStyle(.white)
                         .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .keyboardType(.emailAddress)
+                        .textContentType(.emailAddress)
+                        .autocapitalization(.none)
+                        .disableAutocorrection(true)
                         .overlay(
                             RoundedRectangle(cornerRadius: 15)
                                 .stroke(Color.white.opacity(0.4), lineWidth: 2)

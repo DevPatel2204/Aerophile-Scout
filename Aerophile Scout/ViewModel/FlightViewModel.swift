@@ -21,30 +21,78 @@ class FlightViewModel : ObservableObject {
     @Published var showError = false
     @Published var errorMessage = ""
     
-    func getFlight(iata : String) {
+    func getFlight(iata: String) {
         guard !iata.isEmpty else {
+            print("⚠️ Empty flight number")
             errorMessage = "Please enter a flight number"
             showError = true
             return
         }
         
         loading = true
+        //print("🔍 Fetching flight: \(iata)")
+        
         flightservice.getFlight(iata: iata) { [weak self] flight in
             DispatchQueue.main.async {
                 guard let self = self else { return }
                 self.loading = false
                 
                 if let flight = flight, !flight.data.isEmpty {
+                    //print("✅ Flight data received")
                     self.flight = flight
-                    self.info = Info(status: flight.data[0].flight_status, icon: "airplane", color: .blue, date: flight.data[0].departure.scheduled)
-                    self.departureInfo = DepartureInfo(airport: flight.data[0].departure.airport, terminal: flight.data[0].departure.terminal, scheduled: flight.data[0].departure.scheduled, actual: flight.data[0].departure.actual)
-                    self.arrivalInfo = ArrivalInfo(airport: flight.data[0].arrival.airport, terminal: flight.data[0].arrival.terminal, scheduled: flight.data[0].arrival.scheduled, actual: flight.data[0].arrival.actual)
-                    self.airlineInfo = AirlineInfo(airline: flight.data[0].airline.name, flightNumber: flight.data[0].flight.number, flightSeries: flight.data[0].flight.iata)
+                    let flightData = flight.data[0]
+                    
+                    // Update status info
+                    self.info = Info(
+                        status: flightData.flight_status,
+                        icon: "airplane",
+                        color: .blue,
+                        date: flightData.flight_date
+                    )
+                    //print("📊 Status updated: \(flightData.flight_status)")
+                    
+                    // Update departure info
+                    self.departureInfo = DepartureInfo(
+                        airport: flightData.departure.airport ?? "N/A",
+                        terminal: flightData.departure.terminal ?? "N/A",
+                        scheduled: flightData.departure.scheduled ?? "N/A",
+                        actual: flightData.departure.actual ?? "N/A"
+                    )
+                    //print("🛫 Departure info updated")
+                    
+                    // Update arrival info
+                    self.arrivalInfo = ArrivalInfo(
+                        airport: flightData.arrival.airport ?? "N/A",
+                        terminal: flightData.arrival.terminal ?? "N/A",
+                        scheduled: flightData.arrival.scheduled ?? "N/A",
+                        actual: flightData.arrival.actual ?? "N/A"
+                    )
+                    //print("🛬 Arrival info updated")
+                    
+                    // Update airline info
+                    self.airlineInfo = AirlineInfo(
+                        airline: flightData.airline.name,
+                        flightNumber: flightData.flight.number,
+                        flightSeries: flightData.flight.iata
+                    )
+                    //print("✈️ Airline info updated")
+                    
                 } else {
+                    print("❌ No flight data found")
                     self.errorMessage = "No flight information found"
                     self.showError = true
                 }
             }
+        }
+    }
+    
+    private func getStatusColor(_ status: String) -> Color {
+        switch status.lowercased() {
+        case "active": return .blue
+        case "scheduled": return .green
+        case "landed": return .gray
+        case "cancelled": return .red
+        default: return .orange
         }
     }
     
@@ -61,7 +109,7 @@ class FlightViewModel : ObservableObject {
     
     var fixedDeparture : String{
         let hour = flight.data[0].departure.scheduled
-        let divide = hour.split(separator: "T")
+        let divide = hour!.split(separator: "T")
         let exactHour = divide[1].split(separator: "+")
         let hourString = String(exactHour[0])
         return hourString
@@ -69,7 +117,7 @@ class FlightViewModel : ObservableObject {
     
     var fixedDepartureActual : String{
            let hour = flight.data[0].departure.actual
-           let divide = hour.split(separator: "T")
+        let divide = hour!.split(separator: "T")
            let exactHour = divide[1].split(separator: "+")
            let hourString = String(exactHour[0])
            return hourString
@@ -78,7 +126,7 @@ class FlightViewModel : ObservableObject {
        
        var fixedArrivalScheduled : String{
            let hour = flight.data[0].arrival.scheduled
-           let divide = hour.split(separator: "T")
+           let divide = hour!.split(separator: "T")
            let exactHour = divide[1].split(separator: "+")
            let hourString = String(exactHour[0])
            return hourString

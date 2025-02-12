@@ -8,7 +8,11 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Tabbar()
+        if UserDefaults.standard.bool(forKey: "status") {
+            Tabbar()
+        } else {
+            SplashScreen()
+        }
     }
 }
 

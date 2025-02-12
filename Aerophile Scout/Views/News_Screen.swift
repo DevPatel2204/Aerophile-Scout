@@ -24,9 +24,7 @@ struct News_Screen: View {
     var body: some View {
         NavigationView {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.8), Color.white]), 
-                             startPoint: .top, 
-                             endPoint: .bottom)
+                LinearGradient(gradient: Gradient(colors: [Color.blue, Color.cyan]), startPoint: .top, endPoint: .bottom)
                     .ignoresSafeArea()
                 
                 if isLoading {
@@ -161,7 +159,6 @@ struct NewsCard: View {
                         .foregroundColor(.blue)
                     
                     Spacer()
-                    
                     Image(systemName: "arrow.right.circle.fill")
                         .foregroundColor(.blue)
                 }

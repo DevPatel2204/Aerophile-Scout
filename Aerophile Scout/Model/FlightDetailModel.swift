@@ -39,27 +39,26 @@ struct FlightData: Codable {
     }
 }
 
-struct Departure :Codable{
-    var airport:String
-    var terminal:String
-    var scheduled:String
-    var actual:String
-    var gate:String
+struct Departure: Codable {
+    var airport: String?
+    var terminal: String?
+    var scheduled: String?
+    var actual: String?
+    var gate: String?
 }
 
-struct Arrival :Codable{
-    var airport:String
-    var terminal:String
-    var scheduled:String
-    var actual:String
-    var gate:String
+struct Arrival: Codable {
+    var airport: String?
+    var terminal: String?
+    var scheduled: String?
+    var actual: String?
+    var gate: String?
 }
 
-struct Airline:Codable{
-    var name :String
-    var production_line:String
-    var iata_type:String
-    var model_name:String
+struct Airline: Codable {
+    var name: String
+    var iata: String?
+    var icao: String?
 }
 
 struct Flight:Codable{
