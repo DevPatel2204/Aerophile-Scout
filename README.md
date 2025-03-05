@@ -42,3 +42,6 @@ To set up Aerophile Scout locally:
 
    ```bash
    git clone https://github.com/DevPatel2204/Aerophile-Scout.git
+
+## Demo Video
+https://github.com/user-attachments/assets/617d940c-0ac9-4447-8e5e-81357a8889a1
